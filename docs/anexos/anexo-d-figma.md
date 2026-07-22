@@ -39,6 +39,5 @@ Todas las pantallas deberán mantener coherencia con el diseño de navegación, 
 | **Responsable del diseño** | Fernandez Coronel Jhonatan |
 | **Fecha de última revisión** | **[18/07/2026]** |
 | **Pantallas validadas** | Reserva, recepción, mesas, pedidos, caja, reportes y login. |
-| **Evidencia de feedback** | **[CAPTURA / ACTA / COMENTARIOS DEL USUARIO]** |
 
 **Fuente:** Elaboración propia.
