@@ -8,8 +8,6 @@ Los diagramas documentan la estructura funcional, la arquitectura del software, 
 
 Su finalidad es complementar el Documento de Diseño de Software (SDD) presentado en la Sección 4 del informe, proporcionando una representación gráfica de la solución desarrollada.
 
----
-
 # Estructura del Anexo C
 
 El anexo está organizado en tres secciones:
@@ -28,8 +26,6 @@ Archivo relacionado:
 
 - **anexo-c1-casos-uso-arquitectura.md**
 
----
-
 ## Anexo C2. Actividad y modelo de dominio
 
 Describe el comportamiento interno del sistema y la organización de sus principales entidades.
@@ -43,8 +39,6 @@ Incluye:
 Archivo relacionado:
 
 - **anexo-c2-actividad-dominio.md**
-
----
 
 ## Anexo C3. Flujo de gestión
 
@@ -64,8 +58,6 @@ Archivo relacionado:
 
 - **anexo-c3-flujo-gestion.md**
 
----
-
 # Diagramas incluidos
 
 | Código | Diagrama |
@@ -77,8 +69,6 @@ Archivo relacionado:
 | Figura C5 | Flujo de Gestión |
 | Figura C6 | Flujo de Datos Usuario–Vista–Controlador–Modelo–Base de Datos |
 
----
-
 ## Relación con el informe
 
 Los diagramas desarrollados en este anexo corresponden directamente al contenido descrito en la **Sección 4. Documento de Diseño de Software (SDD)** del informe final, especialmente a los apartados:
@@ -89,7 +79,5 @@ Los diagramas desarrollados en este anexo corresponden directamente al contenido
 - 4.11 Diseño de flujo de datos.
 
 Cada diagrama representa exclusivamente funcionalidades implementadas en el sistema desarrollado y mantiene correspondencia con los módulos documentados en el Product Backlog, la matriz de trazabilidad y los casos de uso.
-
----
 
 **Fuente:** Elaboración propia.
