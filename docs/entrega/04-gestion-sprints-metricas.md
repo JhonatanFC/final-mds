@@ -1,48 +1,99 @@
-# Plantilla de gestión, sprints y métricas
+# Sección 3. Plan de gestión del proyecto
 
-Usar esta estructura para la **Sección 3**. El Excel de planificación debe ser la fuente principal de los valores, fechas y responsables.
+## Descripción
 
-## 3.1 Macroplan de incrementos
+Esta sección presenta la planificación general del proyecto para el desarrollo del **Sistema de Gestión de Reservas y Operaciones para el Restaurante D'Barrio Broaster**.
 
-| Incremento | Objetivo verificable | Módulos asociados | Entregable de cierre | Duración / fechas |
-|---|---|---|---|---|
-| Base técnica | Arquitectura, base de datos, sesión, roles y seguridad. | MVC, usuarios, autenticación. | Sistema con acceso por roles. | **[POR CONFIRMAR]** |
-| Atención inicial | Registrar y gestionar una reserva. | Reserva, recepción, mesas, lista de espera. | Flujo reserva → llegada/mesa. | **[POR CONFIRMAR]** |
-| Operación de sala | Registrar oferta y consumo. | Productos, categorías, pedidos. | Pedido activo con estado. | **[POR CONFIRMAR]** |
-| Cobro | Procesar el consumo y adelanto. | Caja, cobros, pagos/vouchers. | Cobro con total, adelanto y saldo. | **[POR CONFIRMAR]** |
-| Control gerencial | Visualizar información de gestión. | Dashboard y reportes. | Indicadores y reporte consultable. | **[POR CONFIRMAR]** |
+El plan de gestión organiza las actividades del proyecto mediante un cronograma académico, una estimación de recursos y presupuesto, un plan de gestión de riesgos y un sistema de métricas que permite controlar el avance y la calidad del producto durante su desarrollo.
 
-## 3.2 Recursos y estimación
+La planificación mantiene coherencia con el modelo Scrum adaptado seleccionado en la Sección 2 y con los entregables definidos para cada incremento del proyecto. :contentReference[oaicite:1]{index=1}
 
-| Elemento | Dato que debe completar el equipo |
-|---|---|
-| Equipo y roles | **[POR CONFIRMAR]** |
-| Capacidad por sprint | **[POR CONFIRMAR: horas o story points]** |
-| Esfuerzo total | Suma de los valores del Excel. |
-| Presupuesto | **[POR CONFIRMAR: supuesto de costo/hora, licencias y hosting]** |
-| Herramientas | PHP, MySQL/MariaDB, XAMPP, GitHub, CorelDRAW y **[otros reales]**. |
+---
 
-## 3.3 Registro de riesgos propuesto
+# 3.1 Cronograma macro
 
-| ID | Riesgo | Prob. | Impacto | Mitigación | Disparador |
-|---|---|---|---|---|---|
-| R-01 | Reserva duplicada o mesa asignada incorrectamente. | Media | Alto | Validar capacidad/estado; prueba de escenarios límite. | Dos reservas para la misma mesa/franja. |
-| R-02 | Pago o voucher no validado correctamente. | Media | Alto | Revisión por recepción y prueba de aceptación/rechazo. | Cobro sin adelanto válido. |
-| R-03 | Acceso no autorizado por rol. | Media | Alto | Middleware, matriz de rutas y prueba por rol. | Usuario visualiza un módulo restringido. |
-| R-04 | Diferencia en cálculo de caja. | Media | Alto | Pruebas con adelanto, sin adelanto y saldo cero. | Total de caja no coincide con pedido/cobro. |
-| R-05 | Documentación y producto no coinciden. | Alta | Medio | Usar este catálogo como fuente y revisión cruzada. | Módulo mencionado no existe o falta uno real. |
-| R-06 | Datos personales expuestos en GitHub público. | Media | Alto | Ignorar vouchers, credenciales, logs y datos reales. | Archivo sensible aparece en `git status`. |
+La planificación del proyecto se estructura en fases que abarcan desde el diagnóstico organizacional hasta la sustentación del producto final.
 
-El grupo debe ajustar la probabilidad e impacto con su propio criterio y explicar al menos los cinco riesgos seleccionados.
+| Fase | Semanas | Actividades principales | Entregable |
+|------|----------|-------------------------|------------|
+| Formulación | 6 – 7 | Diagnóstico organizacional, identificación de actores, definición del alcance y elaboración del Product Backlog. | Sección 1 y Product Backlog |
+| Diseño del proceso | 8 – 10 | Evaluación de modelos de desarrollo, selección del proceso y planificación de sprints. | Secciones 2 y 3 |
+| Diseño del sistema | 10 – 13 | Arquitectura, diseño modular, base de datos, navegación, seguridad y componentes. | Documento de Diseño de Software (SDD) |
+| Calidad y métricas | 13 – 14 | Perfil de calidad, plan SQA, matriz de pruebas, riesgos e indicadores. | Sección 5 |
+| Integración y cierre | 15 | Consolidación del informe, anexos y repositorio del proyecto. | Informe final |
+| Sustentación | 16 | Presentación y demostración del sistema desarrollado. | Producto final y exposición |
 
-## 3.4 Sistema de métricas
+**Tabla 7. Cronograma macro académico. Fuente: Elaboración propia.** :contentReference[oaicite:2]{index=2}
 
-| Indicador | Fórmula | Frecuencia | Responsable | Umbral de alerta |
-|---|---|---|---|---|
-| Cumplimiento del sprint | Historias aceptadas / historias comprometidas × 100 | Fin de sprint | Scrum Master | < 80% |
-| Casos de prueba aprobados | Casos aprobados / casos ejecutados × 100 | Fin de sprint | QA/equipo | < 90% |
-| Defectos críticos abiertos | Conteo de defectos críticos sin cerrar | Diario en pruebas | Equipo | ≥ 1 |
-| Trazabilidad completa | Historias con evidencia / historias del sprint × 100 | Semanal | Scrum Master | < 100% |
-| Variación de esfuerzo | (Esfuerzo real − planificado) / planificado × 100 | Fin de sprint | Equipo | > 20% |
+La planificación detallada de los sprints se documenta en el archivo de planificación del proyecto y en el **Anexo B. Detalle de sprints**, donde se registra el avance de cada incremento funcional. :contentReference[oaicite:3]{index=3}
 
-Si el docente solicita EVM, usar PV, EV y AC solo si cuentan con un presupuesto y cronograma base real. Para Scrum, las métricas anteriores, velocity y burndown son equivalentes más coherentes.
+---
+
+# 3.2 Estimación de recursos y presupuesto
+
+El desarrollo del proyecto considera la participación de los siguientes recursos humanos.
+
+| Rol | Cantidad | Dedicación estimada | Responsabilidad |
+|------|:--------:|--------------------|-----------------|
+| Product Owner (representante) | 1 | 2 horas por semana | Priorización y validación de entregables. |
+| Scrum Master | 1 | 5 horas por semana | Planificación, coordinación y seguimiento del proyecto. |
+| Desarrolladores Full Stack | 2 | 18 horas por semana cada uno | Implementación, pruebas, base de datos y documentación. |
+| Usuarios de prueba | 3 | 1 hora por sprint | Validación funcional y retroalimentación del sistema. |
+
+### Presupuesto estimado
+
+| Concepto | Supuesto | Costo estimado (S/) |
+|----------|----------|--------------------:|
+| Desarrollo | 360 horas × S/ 65.00 | 23,400.00 |
+| Análisis, diseño y documentación | 80 horas × S/ 45.00 | 3,600.00 |
+| Pruebas y corrección | 48 horas × S/ 45.00 | 2,160.00 |
+| Infraestructura y contingencia | Dominio, pruebas y contingencia | 2,040.00 |
+| **Total estimado** | | **31,200.00** |
+
+**Tabla 8. Presupuesto simulado del proyecto. Fuente: Elaboración propia.** :contentReference[oaicite:4]{index=4}
+
+---
+
+# 3.3 Plan de gestión de riesgos
+
+La gestión de riesgos permite identificar los eventos que podrían afectar el desarrollo del proyecto y establecer medidas preventivas para reducir su impacto.
+
+Entre los riesgos considerados se encuentran:
+
+- Errores en la gestión de reservas y disponibilidad de mesas.
+- Validación incorrecta de vouchers o adelantos.
+- Accesos no autorizados al sistema.
+- Inconsistencias durante el proceso de caja y cobros.
+- Diferencias entre la documentación y el producto desarrollado.
+- Exposición involuntaria de información sensible durante la publicación del proyecto.
+
+El registro detallado de riesgos, junto con su probabilidad, impacto y estrategia de mitigación, forma parte del Plan de Gestión del Proyecto desarrollado en el informe. :contentReference[oaicite:5]{index=5}
+
+---
+
+# 3.4 Sistema de métricas y control
+
+El proyecto incorpora un conjunto de métricas destinadas a controlar el avance del desarrollo y evaluar la calidad del producto durante cada sprint.
+
+Entre los principales indicadores utilizados se encuentran:
+
+- Cumplimiento de historias comprometidas por sprint.
+- Avance del Product Backlog.
+- Casos de prueba ejecutados y aprobados.
+- Defectos identificados y corregidos.
+- Variación del esfuerzo planificado frente al esfuerzo real.
+- Trazabilidad entre requisitos, implementación y pruebas.
+
+Los resultados obtenidos durante la ejecución del proyecto se presentan en el **Anexo J. Resultados de métricas simuladas**, permitiendo evaluar el desempeño del proceso de desarrollo y el cumplimiento de los objetivos establecidos. 
+
+---
+
+## Correspondencia con el informe
+
+El contenido de este documento corresponde a la **Sección 3. Plan de Gestión del Proyecto** del informe académico y proporciona la planificación necesaria para coordinar el desarrollo, seguimiento y control del proyecto hasta la entrega del producto final.
+
+---
+
+**Proyecto:** Sistema de Gestión de Reservas y Operaciones para el Restaurante D'Barrio Broaster
+
+**Documento relacionado:** Sección 3. Plan de Gestión del Proyecto
