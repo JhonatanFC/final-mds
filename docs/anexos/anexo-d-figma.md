@@ -10,7 +10,7 @@ El diseño fue realizado siguiendo los criterios de usabilidad establecidos en e
 
 **Prototipo final:**
 
-> **[PEGAR AQUÍ EL ENLACE DE FIGMA]**
+> **https://www.figma.com/design/bhYfukSj9Yn6qMhKUzHAQ8/Untitled?node-id=19-47**
 
 > **Importante:** Antes de la entrega final, verificar que el enlace tenga permisos de visualización pública para el docente y que pueda abrirse correctamente desde una ventana de incógnito.
 
@@ -35,7 +35,7 @@ Todas las pantallas deberán mantener coherencia con el diseño de navegación, 
 
 | Elemento | Información |
 |----------|-------------|
-| **Enlace Figma** | **[PEGAR AQUÍ EL ENLACE DEL PROTOTIPO FINAL]** |
+| **Enlace Figma** | **https://www.figma.com/design/bhYfukSj9Yn6qMhKUzHAQ8/Untitled?node-id=19-47** |
 | **Responsable del diseño** | Fernandez Coronel Jhonatan |
 | **Fecha de última revisión** | **[18/07/2026]** |
 | **Pantallas validadas** | Reserva, recepción, mesas, pedidos, caja, reportes y login. |
