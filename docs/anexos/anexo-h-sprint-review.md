@@ -1,4 +1,3 @@
-# Anexo H. Guion de Sprint Review
+# Anexo H. Sprint Review
 
-> Documento pendiente de actualización según el informe final.
-
+En cada revisión se demostró el incremento funcional, se recogió retroalimentación simulada del cliente y se actualizó el backlog. Los resultados por sprint están consolidados en [Gestión del proyecto](../03-gestion-proyecto.md).
