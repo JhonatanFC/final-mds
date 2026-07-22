@@ -1,53 +1,72 @@
-# Evidencia funcional del producto final
+# 01. Evidencia del producto final
 
-Fecha de línea base técnica: **21 de julio de 2026**.
+## Descripción
 
-## Módulos implementados
+La presente carpeta reúne las evidencias funcionales correspondientes al **Sistema de Gestión de Reservas y Operaciones para el Restaurante D'Barrio Broaster**, desarrolladas durante la implementación del proyecto.
 
-| Módulo | Capacidades observables | Rutas principales | Evidencia de código |
-|---|---|---|---|
-| Reserva pública | Solicitud, validación, adelanto, voucher y confirmación. | `/reservar` | `ReservaController`, `ReservaPublica`, `reservas/crear.php` |
-| Recepción | Consulta de reservas, revisión de pago, llegada y voucher. | `/recepcion`, `/recepcion/solicitudes` | `RecepcionController`, `Reserva` |
-| Mesas | Alta, edición y eliminación; estado y capacidad. | `/mesas` | `MesaController`, `Mesa`, `admin/mesas.php` |
-| Lista de espera | Registro, asignación de mesa y cancelación. | `/lista-espera` | `ListaEsperaController`, `ListaEspera` |
-| Productos | Productos, categorías e imagen de producto. | `/productos` | `ProductoController`, `Producto`, `Categoria` |
-| Pedidos | Creación y actualización de estado. | `/pedidos` | `PedidoController`, `Pedido` |
-| Caja | Cargos pendientes, cobro y resumen diario. | `/caja` | `CajaController`, `Caja` |
-| Usuarios | Alta de empleados/usuarios y cambio de estado. | `/usuarios` | `EmpleadoController`, `Empleado`, `Usuario` |
-| Gerencia | Indicadores y reportes diarios/semanales. | `/gerencia`, `/reportes` | `GerenciaController`, `ReporteController`, `Reporte` |
-| Seguridad | Sesión, roles, CSRF, escape de salida y PDO. | Transversal | `Session`, `Security`, `AuthMiddleware`, `Database` |
+Las evidencias documentan el funcionamiento de las principales funcionalidades del sistema y respaldan la correspondencia entre el producto implementado, el Documento de Diseño de Software, los casos de uso, la matriz de trazabilidad y las pruebas funcionales descritas en el informe.
 
-## Roles identificados en el producto
+Su finalidad es proporcionar un registro visual del comportamiento del sistema y servir como soporte durante la revisión técnica y la sustentación del proyecto.
 
-| Rol | Operación que sustenta |
-|---|---|
-| Cliente | Registra una reserva y adjunta el voucher del adelanto. |
-| Recepción | Revisa pagos, confirma llegada y administra solicitudes. |
-| Mesero | Registra y actualiza pedidos. |
-| Cajero/a | Registra cobros y consulta el resumen de caja. |
-| Administrador | Mantiene mesas, productos, categorías, usuarios y empleados. |
-| Gerente | Consulta indicadores y reportes. |
+## Funcionalidades documentadas
 
-## Reglas de negocio verificables
+| Módulo | Evidencia funcional esperada |
+|---------|------------------------------|
+| Inicio de sesión | Acceso al sistema según el rol del usuario autenticado. |
+| Gestión de reservas | Registro de reservas, validación de información y generación de la solicitud. |
+| Validación de vouchers | Revisión del comprobante de adelanto y actualización del estado de la reserva. |
+| Recepción | Confirmación de llegada del cliente y asignación de la mesa correspondiente. |
+| Gestión de mesas | Administración de mesas, capacidad, disponibilidad y estado operativo. |
+| Lista de espera | Registro de clientes y asignación de mesas cuando exista disponibilidad. |
+| Gestión de productos | Administración del catálogo de productos y sus categorías. |
+| Gestión de pedidos | Registro, actualización y seguimiento de los pedidos asociados a cada mesa. |
+| Caja y cobros | Registro del pago, aplicación del adelanto y cálculo del saldo final. |
+| Gestión de usuarios | Administración de usuarios, empleados y control de acceso por roles. |
+| Dashboard y reportes | Consulta de indicadores e información consolidada para la gestión administrativa. |
 
-| Regla | Fuente técnica |
-|---|---|
-| El adelanto configurado es S/ 30.00. | `config/config.php` (`RESERVATION_ADVANCE`). |
-| La tolerancia de llegada es 20 minutos. | `config/config.php` (`RESERVATION_TOLERANCE_MINUTES`). |
-| La reserva bloquea mesa durante 120 minutos. | `config/config.php` (`RESERVATION_DURATION_MINUTES`). |
-| El adelanto se considera al calcular el pago final. | `Caja::chargeOrder()` y `CajaController`. |
-| Un voucher debe ser revisado por recepción. | `RecepcionController::reviewPayment()` y `Reserva::reviewPayment()`. |
+## Organización de las evidencias
 
-## Arquitectura y datos
+Las evidencias deberán organizarse de acuerdo con los módulos funcionales implementados en el sistema.
 
-- Arquitectura MVC en PHP: `public` → rutas → controlador → modelo → vista.
-- Persistencia MySQL/MariaDB mediante PDO.
-- Tablas principales: `reservas`, `clientes`, `mesas`, `pagos`, `lista_espera`, `productos`, `categorias`, `pedidos`, `detalle_pedido`, `caja`, `cobros`, `usuarios`, `empleados` y `roles`.
-- Script de instalación disponible: `database/restaurante.sql`.
+```text
+01-evidencia-producto-final/
+├── login/
+├── reservas/
+├── recepcion/
+├── mesas/
+├── lista-espera/
+├── productos/
+├── pedidos/
+├── caja/
+├── usuarios/
+├── dashboard/
+└── reportes/
+```
 
-## Evidencia pendiente que debe adjuntar el grupo
+Cada directorio podrá contener capturas de pantalla, registros visuales, documentos o cualquier otro recurso que permita evidenciar el funcionamiento del módulo correspondiente.
 
-- Capturas reales de cada módulo en ejecución.
-- Diagramas finales elaborados en CorelDRAW, con título y fuente “Elaboración propia”.
-- Archivo Excel de backlog, sprints y métricas.
-- Resultados de pruebas firmados o validados por el equipo.
+## Relación con la documentación
+
+Las evidencias contenidas en esta carpeta mantienen correspondencia con los siguientes apartados del proyecto:
+
+- Sección 4. Documento de Diseño de Software.
+- Anexo C. Diagramas del sistema.
+- Anexo D. Prototipo en Figma.
+- Anexo E. Especificación de casos de uso.
+- Anexo G. Matriz de trazabilidad.
+- Anexo H. Sprint Review.
+- Anexo J. Resultados de métricas.
+
+Esta relación permite verificar que las funcionalidades documentadas corresponden a los requisitos definidos durante la planificación y al producto final desarrollado.
+
+## Consideraciones
+
+Las evidencias incorporadas en esta carpeta deberán corresponder a la versión final del sistema y reflejar el funcionamiento de los procesos principales implementados durante el proyecto. Cada captura o registro visual debe permitir identificar claramente el módulo documentado y servir como respaldo de las funcionalidades descritas en el informe académico.
+
+---
+
+**Proyecto:** Sistema de Gestión de Reservas y Operaciones para el Restaurante D'Barrio Broaster
+
+**Curso:** Metodología de Desarrollo de Software
+
+**Universidad:** Universidad Peruana Los Andes
