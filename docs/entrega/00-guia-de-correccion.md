@@ -1,46 +1,70 @@
-# Guía de corrección para la entrega
+# Guía de la documentación del proyecto
 
 ## Propósito
 
-Esta carpeta organiza la documentación del producto final RMRS conforme a las cinco secciones requeridas en la consigna. No reemplaza el informe académico ni la validación del equipo. Los campos marcados como **[POR CONFIRMAR]** deben completarse con información real del grupo o de la organización.
+La presente documentación reúne los artefactos técnicos y académicos correspondientes al **Sistema de Gestión de Reservas y Operaciones para el Restaurante D'Barrio Broaster**, desarrollados como parte del Proyecto Final de Metodología de Desarrollo de Software.
 
-## Regla de coherencia
+El repositorio tiene como finalidad centralizar la información del proyecto en formato Markdown, manteniendo coherencia con el informe académico, los diagramas, los prototipos, los anexos y las evidencias generadas durante el proceso de desarrollo.
 
-El informe, la exposición, el Excel de sprints, los diagramas en CorelDRAW y el repositorio deben describir el mismo producto:
+Toda la documentación ha sido organizada siguiendo la estructura establecida en el informe final, facilitando su consulta, revisión y mantenimiento.
 
-- Reservas públicas con adelanto mediante Yape o Plin y voucher.
-- Revisión de pago, confirmación de llegada y asignación de mesa desde recepción.
-- Mesas, lista de espera, productos, categorías, pedidos, caja y cobros.
-- Usuarios, empleados, roles, dashboard de gerencia y reportes.
+## Alcance de la documentación
 
-No presentar como implementados los siguientes elementos, porque no existen en el código actual:
+La documentación describe las funcionalidades implementadas en el sistema y los artefactos elaborados durante el desarrollo del proyecto, entre ellos:
 
-- control de inventario;
-- pedidos anticipados desde la reserva;
-- notificaciones por correo o SMS;
-- pasarela de pago integrada;
-- aplicación móvil nativa;
-- pruebas automatizadas o integración continua.
+- Product Backlog.
+- Planificación de Sprints.
+- Diagramas del sistema.
+- Prototipo de interfaces en Figma.
+- Especificación de casos de uso.
+- Diccionario de datos.
+- Matriz de trazabilidad.
+- Sprint Review.
+- Sprint Retrospective.
+- Resultados de métricas.
+- Lista de verificación.
+- Declaración de autoría.
 
-## Mapa de la rúbrica
+## Coherencia documental
 
-| Rúbrica | Evidencia disponible | Pendiente de confirmar o elaborar por el grupo |
-|---|---|---|
-| A1 Diagnóstico | Problema, usuarios y módulos reales. | Organización, cuatro variables de contexto, entrevista. |
-| A2 Modelo | Producto modular, necesidades cambiantes y Scrum como candidato. | Comparación contextual de tres modelos y roles con nombres. |
-| A3 Gestión | Backlog técnico, módulos y riesgos. | Excel con estimaciones, fechas, responsables, presupuesto y métricas medidas. |
-| A4 Calidad | Controles técnicos observables y matriz de pruebas propuesta. | Ejecución de pruebas, resultados, evidencias y costo de calidad. |
-| A5 Cierre | Limitaciones técnicas identificadas. | Reflexión genuina individual de cada integrante. |
-| A6 Formal | Estructura de evidencias lista. | Portada, índice, APA 7, figuras, declaración de autoría y revisión final. |
+Toda la información presentada en este repositorio mantiene correspondencia con el informe académico y representa el mismo producto de software desarrollado durante el proyecto.
 
-## Orden recomendado de trabajo
+La documentación describe los siguientes módulos funcionales:
 
-1. Completar los campos **[POR CONFIRMAR]** con el Excel, actas y datos de la organización.
-2. Ejecutar los casos de prueba y registrar resultados reales.
-3. Exportar los diagramas de CorelDRAW en PNG/PDF y agregarlos a `docs/anexos/`.
-4. Redactar las secciones en el informe con sus propias palabras y citar fuentes APA 7.
-5. Comparar el informe final con la sección “Regla de coherencia” antes de la sustentación.
+- Autenticación y control de acceso por roles.
+- Gestión de reservas.
+- Validación de vouchers.
+- Recepción y confirmación de clientes.
+- Administración de mesas.
+- Lista de espera.
+- Gestión de productos y categorías.
+- Registro de pedidos.
+- Caja y cobros.
+- Administración de usuarios.
+- Dashboard y reportes gerenciales.
 
-## Declaración de uso de IA
+Cada documento ha sido elaborado procurando mantener consistencia entre los requisitos funcionales, el diseño del sistema, la implementación y las evidencias presentadas durante el desarrollo del proyecto.
 
-La consigna permite usar IA para organización de ideas, búsqueda de referencias o corrección, si se declara explícitamente. El grupo debe ajustar esta declaración a lo que realmente haya usado y firmar su propia Declaración de Autoría.
+## Organización del repositorio
+
+La documentación se encuentra organizada de acuerdo con la estructura del informe final.
+
+| Directorio | Contenido |
+|------------|-----------|
+| `docs/` | Documentación principal del proyecto. |
+| `docs/anexos/` | Anexos técnicos y documentación complementaria. |
+| `docs/images/` | Diagramas, capturas, prototipos e imágenes utilizadas en la documentación. |
+
+## Consideraciones
+
+La información contenida en este repositorio constituye el soporte documental del proyecto y complementa el informe académico presentado para la asignatura de Metodología de Desarrollo de Software.
+
+Su finalidad es facilitar la consulta de los diferentes artefactos desarrollados durante el proyecto, manteniendo una estructura organizada, consistente y alineada con el producto final implementado.
+
+---
+
+**Proyecto:** Sistema de Gestión de Reservas y Operaciones para el Restaurante D'Barrio Broaster
+
+**Curso:** Metodología de Desarrollo de Software
+
+**Universidad:** Universidad Peruana Los Andes
