@@ -1,48 +1,49 @@
-# Plantilla de diagnóstico organizacional
+# Sección 1. Diagnóstico organizacional
 
-Usar esta estructura para la **Sección 1** del informe. Escribir con información real o razonablemente sustentada; no copiar esta guía como texto final.
+## Descripción
 
-## 1.1 Presentación de la organización
+El diagnóstico organizacional constituye el punto de partida para el desarrollo del **Sistema de Gestión de Reservas y Operaciones para el Restaurante D'Barrio Broaster**. Su propósito es identificar las características de la organización, comprender el contexto en el que opera, reconocer las necesidades del negocio y establecer el alcance funcional que orienta el diseño y la implementación del sistema.
 
-| Dato requerido | Información a completar |
-|---|---|
-| Nombre de la organización | **[POR CONFIRMAR]** |
-| Rubro y ubicación | **[POR CONFIRMAR]** |
-| Antigüedad y tamaño | **[POR CONFIRMAR]** |
-| Número aproximado de trabajadores | **[POR CONFIRMAR]** |
-| Usuarios directos del sistema | Cliente, recepción, mesero, caja, administrador y gerencia. |
-| Misión y visión | **[POR CONFIRMAR / citar fuente]** |
-| Procesos core | Reservas, atención en sala, toma de pedidos, cobro, administración y análisis de ventas. |
+La información presentada en esta sección sustenta las decisiones adoptadas durante la selección del modelo de desarrollo, la planificación del proyecto, el diseño de la arquitectura y la definición de los mecanismos de aseguramiento de la calidad descritos en las secciones posteriores del informe.
 
-## 1.2 Cuatro variables del contexto (Sommerville)
+## Contenido de la sección
 
-| Variable | Preguntas que debe responder el grupo | Evidencia que deben obtener |
-|---|---|---|
-| Cultura organizacional | ¿La decisión es centralizada? ¿Se acepta el cambio? ¿Se documentan los procesos? | Entrevista, observación o justificación. |
-| Madurez del equipo TI | ¿Existe personal TI? ¿Qué herramientas usa? ¿Ha tenido sistemas previos? | Entrevista, inventario de herramientas. |
-| Naturaleza del producto | ¿Qué datos trata? ¿Qué tan crítico es equivocarse con una reserva, pago o mesa? | Casos de uso y reglas del producto. |
-| Restricciones del negocio | ¿Cuál es el plazo, presupuesto, horario de operación y disponibilidad de usuarios? | Acuerdo del proyecto o estimación justificada. |
+La Sección 1 del informe se encuentra organizada en los siguientes apartados:
 
-### Hallazgos técnicos que sí pueden usarse
+| Apartado | Contenido |
+|-----------|-----------|
+| **1.1 Presentación de la organización** | Descripción del restaurante, su actividad, estructura organizacional, usuarios involucrados y procesos principales. |
+| **1.2 Diagnóstico organizacional** | Análisis del contexto del proyecto considerando las variables propuestas por Sommerville para comprender el entorno organizacional y tecnológico. |
+| **1.3 Necesidad del sistema y alcance** | Identificación del problema, necesidades del negocio, objetivos del sistema y delimitación del alcance funcional del proyecto. |
 
-- El sistema requiere control de acceso por rol.
-- Una reserva depende de disponibilidad/capacidad de mesa y validación de adelanto.
-- Los registros de cobro, operación y voucher son sensibles.
-- Gerencia requiere indicadores y reportes para toma de decisiones.
+## Aspectos analizados
 
-## 1.3 Necesidad y alcance
+Durante el diagnóstico se evaluaron los factores que influyen directamente en el desarrollo del sistema, entre ellos:
 
-Formular el problema con esta secuencia: situación actual → consecuencia → causa → necesidad del sistema. Validar que el alcance solo enumere módulos existentes:
+- Características de la organización y de sus procesos operativos.
+- Perfil de los usuarios que interactúan con la aplicación.
+- Procesos relacionados con la gestión de reservas y la atención al cliente.
+- Restricciones organizacionales y técnicas consideradas para el proyecto.
+- Necesidades que justifican el desarrollo del sistema.
+- Alcance funcional de la solución propuesta.
 
-1. Reserva pública y adelanto.
-2. Recepción y revisión de pago.
-3. Gestión de mesas.
-4. Lista de espera.
-5. Productos y categorías.
-6. Pedidos.
-7. Caja y cobros.
-8. Reportes y dashboard gerencial.
+El análisis de estos aspectos permitió establecer una base sólida para la planificación del proyecto y para la definición de los requisitos funcionales que posteriormente fueron priorizados en el Product Backlog.
 
-## Anexo de entrevista
+## Relación con el proyecto
 
-Preparar un cuestionario de 8–12 preguntas y conservar fecha, entrevistado, cargo, consentimiento y respuestas. No presentar una entrevista como realizada si no existe.
+Los resultados del diagnóstico organizacional mantienen una relación directa con las decisiones documentadas en las secciones posteriores del informe.
+
+- La caracterización de la organización sirve de fundamento para la selección del modelo de desarrollo de software.
+- Las necesidades identificadas orientan la definición del Product Backlog y la planificación de los sprints.
+- El análisis del contexto organizacional sustenta el diseño de la arquitectura, la seguridad, la base de datos y la organización modular del sistema.
+- Los procesos identificados durante el diagnóstico se reflejan en los casos de uso, diagramas y matriz de trazabilidad incluidos en los anexos.
+
+## Correspondencia con el informe
+
+El contenido desarrollado en esta sección corresponde íntegramente a la **Sección 1. Diagnóstico Organizacional** del informe académico y constituye el fundamento para el resto de la documentación técnica presentada en este repositorio.
+
+---
+
+**Proyecto:** Sistema de Gestión de Reservas y Operaciones para el Restaurante D'Barrio Broaster
+
+**Documento relacionado:** Sección 1. Diagnóstico Organizacional
