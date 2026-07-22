@@ -1,52 +1,36 @@
-# Anexo A. Product Backlog resumido
+# Anexo A. Product Backlog
 
-El Product Backlog reúne las historias de usuario priorizadas para el desarrollo del **Sistema de Gestión de Reservas y Operaciones del Restaurante D'Barrio Broaster**.
+## Introducción
 
-Las historias se distribuyeron en cinco sprints, considerando la dependencia entre los módulos y el valor que cada incremento aporta al funcionamiento del sistema. El estado presentado corresponde al producto documentado en el informe final.
+El Product Backlog constituye el registro de los requisitos funcionales priorizados para el desarrollo del Sistema de Gestión de Reservas y Operaciones del Restaurante D'Barrio Broaster. Su elaboración permitió organizar el trabajo del equipo siguiendo un enfoque incremental basado en Scrum adaptado, estableciendo el orden de implementación de cada módulo de acuerdo con las necesidades del negocio y las dependencias existentes entre las funcionalidades.
 
-## Product Backlog
+Cada historia de usuario representa una necesidad identificada durante el diagnóstico organizacional y mantiene correspondencia con los módulos implementados en el sistema, el diseño arquitectónico, la matriz de trazabilidad y los casos de prueba documentados en el informe final.
+
+## Historias de usuario priorizadas
 
 | ID | Historia de usuario | Prioridad | Sprint | Estado |
-|---|---|---:|---:|---|
-| HU-01 | Como usuario, quiero iniciar sesión según mi rol para acceder únicamente a las funciones que me corresponden. | Alta | Sprint 0 | Terminado |
-| HU-02 | Como administrador, quiero gestionar usuarios y empleados para mantener actualizadas sus cuentas y roles de acceso. | Alta | Sprint 0 | Terminado |
-| HU-03 | Como cliente, quiero registrar una reserva con adelanto para solicitar una mesa y adjuntar la evidencia del pago. | Alta | Sprint 1 | Terminado |
-| HU-04 | Como recepcionista, quiero revisar los pagos y confirmar la llegada del cliente para controlar correctamente el estado de cada reserva. | Alta | Sprint 1 | Terminado |
-| HU-05 | Como administrador, quiero gestionar las mesas para controlar su capacidad, ubicación y estado de disponibilidad. | Alta | Sprint 1 | Terminado |
-| HU-06 | Como recepcionista, quiero gestionar la lista de espera para registrar y atender ordenadamente a los clientes que no disponen de una mesa inmediata. | Media | Sprint 1 | Terminado |
-| HU-07 | Como mesero, quiero registrar y actualizar pedidos para controlar el consumo realizado en cada mesa. | Alta | Sprint 2 | Terminado |
-| HU-08 | Como administrador, quiero gestionar productos y categorías para mantener actualizado el catálogo utilizado en los pedidos. | Alta | Sprint 2 | Terminado |
-| HU-09 | Como cajero, quiero registrar el cobro aplicando el adelanto de la reserva para calcular correctamente el saldo final del pedido. | Alta | Sprint 3 | Terminado |
-| HU-10 | Como gerente, quiero consultar el dashboard y los reportes para conocer los indicadores operativos y apoyar la toma de decisiones. | Media | Sprint 4 | Terminado |
+|:--|:--|:--:|:--:|:--:|
+| HU-01 | Como usuario, deseo iniciar sesión para acceder únicamente a las funciones correspondientes a mi rol dentro del sistema. | Alta | Sprint 0 | Finalizado |
+| HU-02 | Como administrador, deseo gestionar usuarios y roles para mantener el control de acceso de la aplicación. | Alta | Sprint 0 | Finalizado |
+| HU-03 | Como cliente, deseo registrar una reserva adjuntando el comprobante del adelanto para solicitar una mesa. | Alta | Sprint 1 | Finalizado |
+| HU-04 | Como recepcionista, deseo validar el voucher y confirmar la llegada del cliente para habilitar la atención. | Alta | Sprint 1 | Finalizado |
+| HU-05 | Como administrador, deseo administrar las mesas y su disponibilidad para organizar correctamente la atención. | Alta | Sprint 1 | Finalizado |
+| HU-06 | Como recepcionista, deseo gestionar la lista de espera para atender ordenadamente a los clientes cuando no existan mesas disponibles. | Media | Sprint 1 | Finalizado |
+| HU-07 | Como mesero, deseo registrar y actualizar pedidos para controlar el consumo realizado por cada mesa. | Alta | Sprint 2 | Finalizado |
+| HU-08 | Como administrador, deseo administrar productos y categorías para mantener actualizado el catálogo del restaurante. | Alta | Sprint 2 | Finalizado |
+| HU-09 | Como cajero, deseo registrar el cobro del consumo aplicando automáticamente el adelanto realizado durante la reserva. | Alta | Sprint 3 | Finalizado |
+| HU-10 | Como gerente, deseo consultar indicadores y reportes para apoyar la toma de decisiones operativas y administrativas. | Media | Sprint 4 | Finalizado |
 
-## Distribución por sprint
+## Priorización del Product Backlog
 
-### Sprint 0: Base técnica y control de acceso
+La priorización se realizó considerando el valor que cada funcionalidad aporta al proceso operativo del restaurante y las dependencias técnicas existentes entre los diferentes módulos del sistema. En consecuencia, las funcionalidades relacionadas con autenticación, administración de usuarios y control de acceso fueron implementadas inicialmente, ya que constituyen la base para el funcionamiento del resto de componentes.
 
-Incluye las historias **HU-01** y **HU-02**. Su propósito fue establecer la arquitectura base del sistema, la autenticación, la gestión de usuarios y el control de acceso según roles.
+Posteriormente se desarrollaron los módulos encargados de la gestión de reservas, recepción, mesas y lista de espera, permitiendo controlar el flujo inicial de atención al cliente. Una vez consolidada esta etapa, se incorporaron las funcionalidades destinadas a la administración del catálogo de productos y al registro de pedidos, continuando con el módulo de caja para el procesamiento de pagos y finalizando con el desarrollo del dashboard y los reportes gerenciales.
 
-### Sprint 1: Reservas y recepción
+Esta planificación permitió entregar incrementos funcionales al finalizar cada sprint, facilitando la validación continua del sistema y manteniendo la trazabilidad entre los requisitos del negocio y los componentes implementados.
 
-Incluye las historias **HU-03**, **HU-04**, **HU-05** y **HU-06**. Este incremento permitió registrar reservas, revisar adelantos, confirmar la llegada de clientes, administrar mesas y controlar la lista de espera.
+## Relación con el proyecto
 
-### Sprint 2: Productos y pedidos
+Las historias de usuario incluidas en este Product Backlog se encuentran directamente relacionadas con el plan de aplicación de Scrum descrito en la Sección 2 del informe, el diseño modular presentado en la Sección 4 y la matriz de trazabilidad desarrollada en el Anexo G. De esta manera, cada requisito funcional puede seguirse desde su definición inicial hasta su implementación dentro del sistema, garantizando la consistencia entre la documentación y el producto desarrollado.
 
-Incluye las historias **HU-07** y **HU-08**. Su objetivo fue implementar la gestión del catálogo de productos y categorías, así como el registro y actualización de pedidos asociados a las mesas.
-
-### Sprint 3: Caja y cobros
-
-Incluye la historia **HU-09**. Este incremento permitió registrar el pago final del consumo, aplicar el adelanto previamente validado y calcular el saldo correspondiente.
-
-### Sprint 4: Dashboard y reportes
-
-Incluye la historia **HU-10**. Su propósito fue consolidar la información operativa del sistema mediante indicadores y reportes orientados a la gerencia.
-
-## Relación con la documentación
-
-El detalle de los objetivos, incrementos, resultados de Sprint Review y acciones de mejora de cada sprint se encuentra en el documento [Anexo B. Detalle de sprints](./anexo-b-sprints.md).
-
-La correspondencia entre requisitos, historias de usuario, componentes del sistema, casos de prueba y evidencias se desarrolla en el documento [Anexo G. Matriz de trazabilidad](./anexo-g-trazabilidad.md).
-
----
-
-**Fuente:** Elaboración propia a partir del Product Backlog del proyecto.
+**Fuente:** Elaboración propia.
