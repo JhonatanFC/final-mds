@@ -6,17 +6,16 @@ Thumbs.db
 .env
 .env.*
 
-# Registros locales
+# Logs
 /logs/*
 !/logs/.gitkeep
 
-# Carpetas de archivos subidos
+# Archivos reales subidos por usuarios
 /uploads/*
 !/uploads/productos/
 !/uploads/usuarios/
 !/uploads/vouchers/
 
-# Ignorar contenido y conservar solamente .gitkeep
 /uploads/productos/*
 !/uploads/productos/.gitkeep
 
@@ -37,3 +36,7 @@ composer.lock
 # Archivos temporales
 diagnostico_proyecto.txt
 estructura_actual.txt
+*.tmp
+*.temp
+*.bak
+*.swp
