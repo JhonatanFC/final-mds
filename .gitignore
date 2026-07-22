@@ -1,22 +1,42 @@
 .DS_Store
 Thumbs.db
 
+# Configuración privada
 /config/database.local.php
+.env
+.env.*
 
-/logs/*.log
+# Logs
+/logs/*
 !/logs/.gitkeep
 
+# Archivos reales subidos por usuarios
 /uploads/*
+!/uploads/productos/
+!/uploads/usuarios/
+!/uploads/vouchers/
+
+/uploads/productos/*
 !/uploads/productos/.gitkeep
+
+/uploads/usuarios/*
 !/uploads/usuarios/.gitkeep
+
+/uploads/vouchers/*
 !/uploads/vouchers/.gitkeep
 
+# Dependencias
 /vendor/
 composer.lock
 
-*.zip
-*.docx
-*.pdf
-
+# Editores
 .idea/
 .vscode/
+
+# Archivos temporales
+diagnostico_proyecto.txt
+estructura_actual.txt
+*.tmp
+*.temp
+*.bak
+*.swp
