@@ -1,62 +1,66 @@
-# Plantilla de cierre y anexos
+# Sección 6. Conclusiones y reflexión crítica
 
-Usar esta estructura para la **Sección 5**, referencias y anexos. Las reflexiones deben ser redactadas personalmente por cada integrante.
+## Descripción
 
-## 5.1 Conclusiones
+La presente sección sintetiza los resultados obtenidos durante el desarrollo del Sistema de Gestión de Reservas y Operaciones para el Restaurante D'Barrio Broaster. Se exponen las principales conclusiones derivadas del proceso de análisis, diseño, planificación, implementación y aseguramiento de la calidad, así como las limitaciones identificadas durante el proyecto y las oportunidades de mejora planteadas para futuros desarrollos.
 
-Construir las conclusiones a partir de decisiones demostrables:
+Asimismo, se incorpora una reflexión individual orientada a valorar la experiencia obtenida durante el desarrollo del proyecto y el aporte realizado por cada integrante del equipo.
 
-- elección del modelo y adaptación aplicada;
-- priorización de reservas, recepción, pedidos, caja y reportes;
-- medidas de seguridad y calidad seleccionadas;
-- límites identificados y siguientes mejoras.
+## 6.1 Conclusiones
 
-Cada conclusión debe responder “qué se decidió, por qué, y qué evidencia lo respalda”, sin repetir el índice.
+Las conclusiones del proyecto se fundamentan en los resultados obtenidos durante el desarrollo del sistema y en las evidencias documentadas a lo largo del informe.
 
-## 5.2 Reflexión individual
+Entre los principales aspectos evaluados se encuentran:
 
-Cada integrante debe redactar al menos un párrafo propio e identificar:
+- La selección y aplicación del modelo Scrum adaptado como estrategia para organizar el desarrollo incremental del sistema.
+- La implementación de los módulos funcionales correspondientes a reservas, recepción, mesas, lista de espera, productos, pedidos, caja, usuarios y reportes gerenciales.
+- La definición de una arquitectura basada en el patrón Modelo–Vista–Controlador (MVC), complementada con mecanismos de autenticación, autorización por roles, protección CSRF y acceso seguro a la base de datos mediante PDO.
+- La aplicación de un plan de calidad sustentado en ISO/IEC 25010 y en un proceso SQA con enfoque Shift Left para fortalecer la calidad del producto durante todo el ciclo de desarrollo.
+- La incorporación de mecanismos de trazabilidad entre los requisitos del negocio, las historias de usuario, el diseño técnico, las pruebas funcionales y el producto implementado.
 
-1. Su contribución real.
-2. Una decisión o dificultad concreta.
-3. Qué habría cambiado con otro modelo de proceso.
-4. Una mejora que aplicaría en un siguiente proyecto.
+Las conclusiones completas se desarrollan en la **Sección 6.1** del informe académico.
 
-No combinar las reflexiones en un único texto grupal.
+## 6.2 Limitaciones y mejoras
 
-## 5.3 Limitaciones reales del producto
+Durante el desarrollo del proyecto se identificaron diversas limitaciones propias del alcance definido para esta implementación académica.
 
-Usar solo las que puedan defender durante la sustentación:
+Entre las principales limitaciones se encuentran:
 
-- no hay pasarela de pago real; el adelanto requiere voucher y revisión humana;
-- no hay envío de notificaciones por correo/SMS;
-- no hay app móvil nativa;
-- no hay pruebas automatizadas ni CI;
-- requiere instalación local XAMPP;
-- el repositorio debe seguir revisándose para no exponer datos de prueba personales.
+- La validación de adelantos se realiza mediante revisión manual de vouchers.
+- El sistema no incorpora integración con pasarelas de pago en línea.
+- No se implementan servicios de notificación mediante correo electrónico o mensajería instantánea.
+- El despliegue se encuentra orientado a un entorno local basado en Apache, PHP y MySQL/MariaDB.
+- El proyecto no contempla pruebas automatizadas ni procesos de integración continua.
 
-## Referencias APA 7
+Como oportunidades de mejora se propone incorporar mecanismos de pago electrónico, servicios automáticos de notificación, despliegue en infraestructura en la nube, automatización de pruebas y ampliación de funcionalidades orientadas a dispositivos móviles.
 
-El equipo debe incluir al menos cinco fuentes y comprobar los datos bibliográficos. Como categorías de búsqueda válidas:
+## 6.3 Reflexión individual
 
-- texto del curso sobre procesos de software;
-- Scrum Guide vigente;
-- ISO/IEC 25010;
-- documentación oficial de PHP/PDO;
-- documentación de OWASP sobre CSRF, sesiones o control de acceso.
+La reflexión individual constituye un espacio destinado a que cada integrante del equipo documente su experiencia durante el desarrollo del proyecto.
 
-No incluir fuentes no consultadas. Verificar la edición y URL/DOI en cada referencia.
+Cada reflexión presenta la participación realizada, las decisiones técnicas asumidas, las dificultades encontradas durante la implementación y los aprendizajes obtenidos a lo largo del proceso de desarrollo, permitiendo valorar tanto el trabajo colaborativo como el crecimiento profesional alcanzado durante la ejecución del proyecto.
 
-## Anexos sugeridos
+## Referencias
+
+Las referencias bibliográficas del proyecto se presentan siguiendo el formato APA Séptima Edición e incluyen las fuentes utilizadas para sustentar el modelo de desarrollo, la arquitectura del sistema, los mecanismos de seguridad, el modelo de calidad ISO/IEC 25010 y las tecnologías empleadas durante la implementación.
+
+## Anexos
+
+El informe incorpora los siguientes anexos como evidencia técnica del desarrollo del proyecto.
 
 | Anexo | Contenido |
-|---|---|
-| A | Tabla comparativa de modelos candidatos. |
-| B | Entrevista/cuestionario con evidencia real. |
-| C | Product Backlog y Excel de sprints. |
-| D | Capturas de Sprint Review y del sistema final. |
-| E | Diagramas de CorelDRAW: casos de uso, clases, actividades y/o base de datos. |
-| F | Matriz de casos de prueba ejecutados. |
-| G | Declaración de Autoría firmada. |
+|--------|-----------|
+| Anexo A | Product Backlog resumido. |
+| Anexo B | Detalle de sprints. |
+| Anexo C | Diagramas del sistema. |
+| Anexo D | Enlace del prototipo en Figma. |
+| Anexo E | Especificación de casos de uso. |
+| Anexo F | Diccionario de datos resumido. |
+| Anexo G | Matriz de trazabilidad. |
+| Anexo H | Guion de Sprint Review. |
+| Anexo I | Guion de retrospectiva. |
+| Anexo J | Resultados de métricas simuladas. |
+| Anexo K | Lista de verificación previa a la sustentación. |
+| Anexo L | Declaración de autoría. |
 
-Cada tabla y figura debe tener numeración, título descriptivo y fuente (por ejemplo, “Elaboración propia”).
+Los anexos complementan la documentación técnica del proyecto y proporcionan las evidencias que respaldan las actividades de análisis, planificación, diseño, implementación, validación y control desarrolladas durante todo el ciclo de vida del software.
