@@ -44,11 +44,11 @@ El desarrollo del proyecto considera la participación de los siguientes recurso
 
 | Concepto | Supuesto | Costo estimado (S/) |
 |----------|----------|--------------------:|
-| Desarrollo | 360 horas × S/ 65.00 | 23,400.00 |
-| Análisis, diseño y documentación | 80 horas × S/ 45.00 | 3,600.00 |
-| Pruebas y corrección | 48 horas × S/ 45.00 | 2,160.00 |
+| Desarrollo | 100 horas × S/ 25.00 | 2,500.00 |
+| Análisis, diseño y documentación | 80 horas × S/ 15 | 1,200.00 |
+| Pruebas y corrección | 48 horas × S/ 15.00 | 720 |
 | Infraestructura y contingencia | Dominio, pruebas y contingencia | 2,040.00 |
-| **Total estimado** | | **31,200.00** |
+| **Total estimado** | | **6,460.00** |
 
 **Tabla 8. Presupuesto simulado del proyecto. Fuente: Elaboración propia.** :contentReference[oaicite:4]{index=4}
 
