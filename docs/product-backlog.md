@@ -13,11 +13,9 @@ Escala de prioridad: **Alta**, **Media**, **Baja**. El estado se determinó por 
 | HU-07 | Como mesero, quiero registrar y consultar pedidos. | Alta | 2 | Terminado | `PedidoController.php`, `meseros/pedidos.php` |
 | HU-08 | Como administrador, quiero mantener productos y categorías. | Alta | 2 | Terminado | `ProductoController.php`, `admin/productos.php` |
 | HU-09 | Como caja, quiero registrar el pago y cerrar el consumo. | Alta | 3 | Terminado | `CajaController.php`, `caja/index.php` |
-| HU-10 | Como cliente, quiero adjuntar evidencia del adelanto de reserva. | Alta | 3 | Terminado | `ReservaPublica.php`, `reservas/crear.php` |
-| HU-11 | Como gerente, quiero consultar indicadores operativos. | Media | 4 | Terminado | `GerenciaController.php`, `gerente/dashboard.php` |
-| HU-12 | Como gerente, quiero obtener reportes de la operación. | Media | 4 | Terminado | `ReporteController.php`, `gerente/reportes.php` |
-| HU-13 | Como cliente, quiero recibir notificaciones por correo o SMS. | Baja | Futuro | Pendiente | No implementado |
-| HU-14 | Como administrador, quiero pruebas automáticas en cada cambio. | Media | Futuro | Pendiente | No existe suite automatizada |
+| HU-10 | Como gerente, quiero consultar dashboard y reportes para tomar decisiones. | Media | 4 | Terminado | `GerenciaController.php`, `ReporteController.php`, vistas de gerencia |
+| HU-11 | Como cliente, quiero recibir notificaciones por correo o SMS. | Baja | Futuro | Pendiente | No implementado |
+| HU-12 | Como administrador, quiero pruebas automáticas en cada cambio. | Media | Futuro | Pendiente | No existe suite automatizada |
 
 ## Criterios de aceptación resumidos
 
@@ -27,4 +25,4 @@ Escala de prioridad: **Alta**, **Media**, **Baja**. El estado se determinó por 
 - HU-05: se pueden crear y actualizar mesas sin duplicar su identificador.
 - HU-07: el pedido conserva sus productos, cantidades y estado.
 - HU-09: el total y el adelanto se reflejan en el saldo final.
-- HU-11/HU-12: únicamente gerencia autorizada consulta los datos agregados.
+- HU-10: únicamente gerencia autorizada consulta indicadores y reportes agregados.

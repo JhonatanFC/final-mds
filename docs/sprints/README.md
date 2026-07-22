@@ -1,14 +1,14 @@
 # Plan y evidencia de sprints
 
-La siguiente línea base organiza el incremento existente. Las fechas históricas no se inventan; el repositorio inicia su trazabilidad formal el 21 de julio de 2026.
+La siguiente planificación corresponde al informe final del proyecto académico.
 
 | Sprint | Objetivo | Historias | Incremento verificable |
 |---:|---|---|---|
-| 0 | Preparar arquitectura, datos y seguridad base. | HU-01, HU-02 | MVC, conexión PDO, sesiones, roles y usuarios. |
-| 1 | Permitir reservar y coordinar la atención inicial. | HU-03 a HU-06 | Reservas, recepción, mesas y lista de espera. |
-| 2 | Gestionar productos y pedidos del servicio. | HU-07, HU-08 | Productos, categorías y pedidos. |
-| 3 | Controlar adelantos, pagos y cierre de consumo. | HU-09, HU-10 | Caja, pagos y comprobantes. |
-| 4 | Entregar información para decisiones gerenciales. | HU-11, HU-12 | Dashboard y reportes. |
+| 0 · 10/05/2026 | Implementar la base técnica segura. | HU-01, HU-02 | MVC, PDO, base de datos, autenticación, usuarios y control de acceso. |
+| 1 · 24/05/2026 | Implementar el proceso inicial de atención. | HU-03 a HU-06 | Reservas, recepción, mesas y lista de espera. |
+| 2 · 07/06/2026 | Implementar la operación de sala. | HU-07, HU-08 | Productos, categorías y pedidos. |
+| 3 · 21/06/2026 | Implementar el cobro y comprobantes. | HU-09 | Caja, pagos, adelantos y vouchers. |
+| 4 · 05/07/2026 | Entregar información de gestión. | HU-10 | Dashboard, reportes y consolidación documental. |
 
 ## Plantilla para cada sprint futuro
 
@@ -21,21 +21,12 @@ La siguiente línea base organiza el incremento existente. Las fechas histórica
 7. Sprint Review: aceptado/rechazado y observaciones.
 8. Retrospectiva: mantener, mejorar y acción concreta.
 
-## Retrospectiva de la línea base
+## Resultados de Sprint Review y retrospectivas
 
-### Mantener
-
-- separación MVC y control de acceso por roles;
-- consultas con PDO y medidas CSRF;
-- módulos alineados con el flujo operativo del restaurante.
-
-### Mejorar
-
-- incorporar pruebas automatizadas;
-- reemplazar configuración fija de URL por variables de entorno;
-- eliminar archivos vacíos y consolidar scripts SQL;
-- usar issues y pull requests para la trazabilidad.
-
-### Acción del siguiente sprint
-
-Crear una suite mínima de pruebas para autenticación, reservas y cálculo de caja, y ejecutarla en GitHub Actions.
+| Sprint | Resultado | Acción de mejora |
+|---:|---|---|
+| 0 | Aprobado: autenticación, MVC y conexión a datos verificados. | Estandarizar código y documentación técnica temprana. |
+| 1 | Aprobado: flujo de reserva y asignación de mesa validado. | Unificar criterios de usabilidad y mensajes de confirmación. |
+| 2 | Aprobado: pedidos y catálogo de productos operativos. | Optimizar consultas y reutilizar componentes. |
+| 3 | Aprobado: cálculo de pagos y emisión de comprobantes verificados. | Mejorar voucher y registrar auditoría de transacciones. |
+| 4 | Aprobado: reportes e indicadores disponibles para gerencia. | Automatizar pruebas funcionales y ampliar documentación. |

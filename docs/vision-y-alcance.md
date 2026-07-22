@@ -2,7 +2,7 @@
 
 ## Problema
 
-La gestión manual de reservas, disponibilidad de mesas, pedidos y pagos produce duplicidad de información, tiempos de espera y poca visibilidad para la gerencia. RMRS centraliza la operación en una aplicación web con acceso según responsabilidades.
+La gestión manual de reservas, disponibilidad de mesas, pedidos y pagos en el restaurante ficticio D'Barrio Broaster produce duplicidad de información, tiempos de espera y poca visibilidad para la gerencia. RMRS centraliza la operación en una aplicación web con acceso según responsabilidades.
 
 ## Objetivo del producto
 

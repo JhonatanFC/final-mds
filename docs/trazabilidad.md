@@ -11,8 +11,6 @@
 | RF-07 Gestionar pedidos | HU-07 | `PedidoController`, `Pedido` | CP-09 |
 | RF-08 Gestionar productos | HU-08 | `ProductoController`, `Producto`, `Categoria` | CP-10 |
 | RF-09 Registrar pago | HU-09 | `CajaController`, `Caja` | CP-11, CP-12 |
-| RF-10 Adjuntar adelanto | HU-10 | `ReservaPublica`, vista de reserva | CP-13 |
-| RF-11 Dashboard | HU-11 | `GerenciaController`, `Reporte` | CP-14 |
-| RF-12 Reportes | HU-12 | `ReporteController`, `Reporte` | CP-15 |
+| RF-10 Dashboard y reportes | HU-10 | `GerenciaController`, `ReporteController`, `Reporte` | CP-10 |
 
-La definición detallada de los casos CP-01 a CP-15 está en [calidad-y-pruebas.md](calidad-y-pruebas.md).
+La definición detallada de los casos funcionales está en [calidad-y-pruebas.md](calidad-y-pruebas.md).

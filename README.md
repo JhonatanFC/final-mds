@@ -1,6 +1,6 @@
 # RMRS - Sistema de Gestión y Reservas para Restaurante
 
-Proyecto académico del curso **Metodología de Desarrollo de Software**. RMRS es una aplicación web para administrar reservas, mesas, lista de espera, pedidos, caja, productos, usuarios y reportes de un restaurante.
+Proyecto académico del curso **Metodología de Desarrollo de Software**. RMRS es una aplicación web para administrar reservas, mesas, lista de espera, pedidos, caja, productos, usuarios y reportes del restaurante ficticio **D'Barrio Broaster**.
 
 ## Integrantes
 
@@ -35,6 +35,7 @@ La documentación del proceso está en [`docs/`](docs/README.md):
 - estrategia de pruebas y calidad;
 - riesgos, métricas y retrospectiva;
 - Definition of Ready y Definition of Done.
+- Documento de Diseño de Software (SDD).
 
 > La línea base Scrum fue reconstruida el 21 de julio de 2026 a partir del producto funcional entregado. No pretende sustituir el historial real de reuniones o commits anterior a la creación del repositorio.
 
