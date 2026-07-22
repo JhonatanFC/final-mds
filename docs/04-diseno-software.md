@@ -1,49 +1,113 @@
-# SECCIÓN 4. DOCUMENTO DE DISEÑO DE SOFTWARE
-
-## Descripción
-
-El Documento de Diseño de Software (Software Design Document – SDD) reúne las decisiones arquitectónicas, estructurales y técnicas adoptadas para el desarrollo del Sistema de Gestión de Reservas y Operaciones del Restaurante D'Barrio Broaster. Su propósito es establecer una guía de referencia para la implementación, mantenimiento y evolución del producto, asegurando que cada componente responda a los requisitos funcionales y no funcionales definidos durante las etapas de análisis y planificación. :contentReference[oaicite:1]{index=1}
-
-El diseño del sistema se basa en una arquitectura en capas utilizando el patrón **Modelo–Vista–Controlador (MVC)**, permitiendo separar la lógica de negocio, la presentación y el acceso a datos. Esta organización facilita la mantenibilidad del código, la reutilización de componentes y la incorporación de nuevas funcionalidades sin afectar el comportamiento del resto de la aplicación. :contentReference[oaicite:2]{index=2}
-
-La solución se implementa utilizando **PHP** como lenguaje del lado del servidor, **Apache** como servidor web ejecutado sobre XAMPP y **MySQL/MariaDB** como sistema gestor de base de datos. La persistencia de la información se realiza mediante **PDO** y consultas parametrizadas, reduciendo el riesgo de inyección SQL y fortaleciendo la seguridad de la aplicación. :contentReference[oaicite:3]{index=3}
-
-El sistema integra los procesos de reserva pública, validación de pagos mediante vouchers, recepción de clientes, administración de mesas, gestión de lista de espera, registro de pedidos, control de caja, administración de usuarios y generación de reportes gerenciales, garantizando la trazabilidad entre los procesos del negocio y los módulos implementados. :contentReference[oaicite:4]{index=4}
-
-## Contenido del Documento de Diseño de Software
-
-El SDD desarrolla de manera estructurada los principales componentes técnicos del sistema:
-
-- Arquitectura general del sistema.
-- Principios de diseño arquitectónico aplicados.
-- Diseño modular y organización de responsabilidades.
-- Modelo de base de datos.
-- Diseño de componentes.
-- Diseño de navegación.
-- Diseño de interfaces de usuario.
-- Diseño de seguridad.
-- Diseño de persistencia.
-- Diseño de calidad.
-- Diseño de flujo de datos.
-- Diseño de despliegue.
-- Estrategias de escalabilidad y mantenibilidad. :contentReference[oaicite:5]{index=5}
-
-Cada uno de estos elementos se encuentra documentado siguiendo un enfoque coherente con la arquitectura seleccionada y mantiene la trazabilidad con los requisitos del negocio, el Product Backlog y las historias de usuario desarrolladas durante los diferentes Sprints del proyecto. :contentReference[oaicite:6]{index=6}
-
 ## Arquitectura del sistema
 
-La arquitectura del sistema organiza los componentes de la aplicación mediante una estructura MVC que distribuye claramente las responsabilidades entre presentación, lógica de negocio y acceso a datos.
+El Sistema de Gestión de Reservas y Operaciones del Restaurante D'Barrio Broaster implementa una arquitectura basada en el patrón **Modelo–Vista–Controlador (MVC)**, organizada en tres capas principales: presentación, lógica de negocio y acceso a datos. Esta arquitectura permite separar claramente las responsabilidades de cada componente, facilitando el mantenimiento, la escalabilidad y la evolución del sistema.
 
-El flujo general de procesamiento inicia con la solicitud realizada por el usuario desde la interfaz web. Posteriormente, el sistema valida la sesión activa y los permisos asociados al rol del usuario antes de ejecutar la lógica correspondiente. Los controladores coordinan la operación solicitada, los modelos administran la interacción con la base de datos mediante PDO y las vistas presentan la información procesada al usuario final. Este esquema reduce el acoplamiento entre componentes y facilita la evolución del sistema durante futuras iteraciones. :contentReference[oaicite:7]{index=7}
+La aplicación fue desarrollada utilizando **PHP** como lenguaje del lado del servidor, ejecutándose sobre **Apache** mediante XAMPP y utilizando **MySQL/MariaDB** como sistema gestor de bases de datos. El acceso a la información se realiza mediante **PDO** y consultas preparadas, garantizando una comunicación segura y eficiente con la base de datos.
 
-## Diseño técnico
+La arquitectura MVC permite que cada solicitud realizada por un usuario siga un flujo controlado desde la interfaz hasta la base de datos y regrese posteriormente con la información procesada, evitando el acoplamiento entre la interfaz gráfica y la lógica del negocio.
 
-El diseño técnico prioriza la modularidad, la reutilización de componentes y la separación de responsabilidades. Cada módulo funcional implementa únicamente las operaciones relacionadas con su dominio, favoreciendo la mantenibilidad y simplificando las actividades de prueba y depuración.
+### Arquitectura lógica
 
-Asimismo, el diseño incorpora mecanismos de autenticación, autorización basada en roles, protección CSRF, validación de entradas, control de sesiones y escape de salida, alineando la implementación con las recomendaciones de seguridad para aplicaciones web transaccionales. :contentReference[oaicite:8]{index=8}
+La solución se divide en tres capas principales:
 
-## Documentación complementaria
+### Capa de Presentación (Vista)
 
-El desarrollo completo del Documento de Diseño de Software se encuentra disponible en el archivo **`sdd.md`**, donde se describen en detalle todos los componentes técnicos, la arquitectura, los módulos funcionales, el modelo de datos, las interfaces, la seguridad, la persistencia, el despliegue y las estrategias de mantenimiento del sistema.
+Corresponde a todas las interfaces con las que interactúan los usuarios del sistema. Está desarrollada utilizando PHP, HTML, CSS, Bootstrap y JavaScript.
 
-Los diagramas de arquitectura, casos de uso, actividades, modelo de dominio y flujo general del sistema se presentan en el **Anexo C**, complementando la documentación técnica del proyecto y proporcionando la representación gráfica del diseño implementado. :contentReference[oaicite:9]{index=9}
+Esta capa tiene como responsabilidad:
+
+- Mostrar la información al usuario.
+- Capturar datos mediante formularios.
+- Presentar reportes y mensajes del sistema.
+- Enviar las solicitudes al controlador correspondiente.
+
+Las vistas no contienen lógica de negocio ni realizan consultas directas a la base de datos.
+
+### Capa de Lógica de Negocio (Controladores)
+
+Los controladores representan el núcleo funcional del sistema.
+
+Cada controlador recibe las solicitudes provenientes de las vistas, valida la información recibida, verifica los permisos del usuario autenticado y coordina la ejecución de las reglas del negocio.
+
+Entre sus principales responsabilidades se encuentran:
+
+- Gestionar reservas.
+- Validar vouchers.
+- Administrar mesas.
+- Registrar pedidos.
+- Procesar cobros.
+- Administrar usuarios.
+- Generar reportes.
+
+Los controladores actúan como intermediarios entre las vistas y los modelos.
+
+### Capa de Acceso a Datos (Modelos)
+
+Los modelos encapsulan todas las operaciones relacionadas con la base de datos.
+
+Cada modelo representa una entidad del sistema, como usuarios, reservas, mesas, pedidos o pagos, utilizando PDO para ejecutar operaciones CRUD mediante consultas parametrizadas.
+
+Gracias a esta separación, cualquier cambio en la estructura de la base de datos puede realizarse sin afectar la interfaz de usuario ni la lógica del negocio.
+
+### Flujo de funcionamiento de la arquitectura
+
+Cada operación realizada dentro del sistema sigue el siguiente proceso:
+
+1. El usuario realiza una acción desde el navegador (por ejemplo, registrar una reserva).
+2. La solicitud HTTP es recibida por el Router del sistema.
+3. El Router identifica el controlador correspondiente.
+4. El Middleware verifica la sesión activa y los permisos del usuario.
+5. El Controlador valida la información recibida y ejecuta las reglas del negocio.
+6. El Controlador solicita la información necesaria al Modelo.
+7. El Modelo realiza las consultas o actualizaciones mediante PDO.
+8. La Base de Datos devuelve el resultado al Modelo.
+9. El Modelo retorna la información al Controlador.
+10. El Controlador envía los datos a la Vista.
+11. La Vista genera la respuesta HTML que finalmente es presentada al usuario.
+
+Este flujo garantiza una clara separación de responsabilidades, reduciendo el acoplamiento entre componentes y facilitando el mantenimiento del software.
+
+### Diagrama general de la arquitectura
+
+```text
+                   Usuario
+                      │
+                      ▼
+             Navegador Web
+                      │
+               Solicitud HTTP
+                      │
+                      ▼
+               Router (index.php)
+                      │
+                      ▼
+      Middleware (Sesión y Roles)
+                      │
+                      ▼
+               Controladores
+                      │
+          ┌───────────┴───────────┐
+          ▼                       ▼
+      Modelos (PDO)           Vistas
+          │                       ▲
+          ▼                       │
+    Base de Datos            Respuesta HTML
+    MySQL / MariaDB               │
+          ▲                       │
+          └──────────────┬────────┘
+                         ▼
+                      Usuario
+```
+
+### Beneficios de la arquitectura MVC
+
+La implementación del patrón MVC proporciona diversas ventajas para el desarrollo del sistema:
+
+- Separación entre presentación, lógica de negocio y acceso a datos.
+- Mayor organización del código fuente.
+- Facilidad para realizar mantenimiento y corrección de errores.
+- Reutilización de componentes entre diferentes módulos.
+- Escalabilidad para incorporar nuevas funcionalidades.
+- Mejor control de seguridad mediante autenticación, autorización y middleware.
+- Acceso centralizado a la base de datos mediante PDO y consultas preparadas.
+- Facilita el trabajo colaborativo entre los desarrolladores.
